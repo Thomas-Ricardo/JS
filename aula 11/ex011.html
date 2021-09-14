@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultor de Nacionalidade</title>
+</head>
+<body>
+    <h1>Consulta de Nacionalidade</h1>
+    Qual o país que você mora: <input type="text" id='txtpais'>
+    <input type="button" value="Verificar" onclick="Verificar()">
+    <div id= 'res'>
+    </div>
+    <script>
+    function Verificar () {
+            var txtp = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML (`Seu país é ${txtp}`)
+            if(txtp == 'Brasil') {
+            res.innerHTML ('Você é Brasileiro')
+            }
+            else(txtp != 'Brasil') {
+                res.innerHTML ('Você é Estrangeiro')
+            }
+            
+        }
+        
+
+    </script>
+
+</body>
+</html>
